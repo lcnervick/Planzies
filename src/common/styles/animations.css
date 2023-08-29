@@ -1,0 +1,58 @@
+/***  ANIMATIONS  **/
+
+
+.animate-slide-left {
+	transform:translateX(25%) !important;
+	opacity: 0%;
+	transition: all 0.5s ease-in-out;
+}
+.animate-slide-left.animate-active {
+	transform:translateX(0) !important;
+	opacity: 100%;
+}
+
+.animate-slide-right {
+	opacity: 0%;
+	transition: all 0.5s ease-in-out;
+	transform:translateX(-25%) !important;
+}
+.animate-slide-right.animate-active {
+	transform:translateX(0) !important;
+	opacity: 100%;
+}
+
+
+/***  Image Placeholder  ***/
+
+.image-placeholder::after {  
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fcfcfc;
+	color: #666;
+	font-family: 'Helvetica';
+	font-weight: 300;
+	line-height: 6;  
+	text-align: center;
+	content: 'Image Not Found';
+}
+
+.image-placeholder::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+    background: linear-gradient(70deg, transparent, transparent 40%, #ffffff 50%, transparent 60%);
+    animation: placeholder-gradient 3s infinite ease-in-out;
+}
+@keyframes placeholder-gradient {
+	from { left: -100%; }
+	to { left: 100%; }
+}

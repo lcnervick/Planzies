@@ -1,0 +1,66 @@
+/****  DESIGN BEST PRACTICES  ****/
+/* Use 2-3 well-paired fonts, but no more.
+/* Adjust font style, size, weight, spacing, and color.
+/* Whitespace plays a big part in readability. Make sure all of your text elements have enough whitespace.
+/* Use standard convention for links and navigation buttons so users know what to expect. (button looks or underlines in text). Never use blue text.
+/* Use columns when necessary to keep line length at around 50-75 characters.
+/* Use colored cards to pair images with important text so users’ eyes are drawn towards it.
+/* Have the elements you want users to notice at the top of the page, or down the left-hand side because those are the areas of the page users will notice when skimming.
+/*********************************/
+
+:root {
+	--theme-main:		 hsl(202, 71%, 47%); /* This color should be eye-catching but not harsh. It can be liberally applied to your layout as its main identity. */
+	--theme-light:		 hsl(210, 6%, 93%); /* Use this color as the background for your dark-on-light designs, or the text color of an inverted design. */
+	--theme-dark:		 hsl(210, 52%, 33%); /* Use as the text color for dark-on-light designs, or as the background for inverted designs. */
+	--theme-light-accent:hsl(217, 49%, 71%); /* Accent colors can be used to bring attention to design elements by contrasting with the rest of the palette. */
+	--theme-dark-accent: hsl(300, 74%, 72%); /* Another accent color to consider. Not all colors have to be used - sometimes a simple color scheme works best. */
+	font-size: 16px;
+	line-height: 1.35em;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	overflow-x: hidden;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	overflow-x: hidden;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+img {
+	width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top:0.75em;
+	margin-bottom: 0.5em;
+	font-weight: 700;
+	transition: font-size 0.25s ease;
+}
+
+p {
+
+}
+
+.clearfix::after {
+	content: " ";
+	clear: both;
+	display: table;
+}
+  
