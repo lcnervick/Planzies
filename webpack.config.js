@@ -22,7 +22,7 @@ module.exports = {
 	// tell webpack where to build to
 	output: {
 		filename: 'index.[contenthash].js',
-		path: path.join(__dirname, "dist"),
+		path: path.join(__dirname, "public"),
 	},
 	module: {
 		rules: [
