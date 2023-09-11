@@ -6,9 +6,8 @@ const errorhandler = require('errorhandler');
 const jwt = require('jsonwebtoken');
 const notifier = require('node-notifier');
 const session = require('express-session');
+const loginRouter = require('./login');
 
-
-const login = require('./login');
 
 const app = express();
 const PORT = process.env.PORT || 80;
@@ -32,9 +31,7 @@ app.use(
 	})
 );
 
-app.use(login({app}));
-
-
+app.use(loginRouter);
 
 app.listen(PORT, () => {
 	console.log(`Listening on port ${PORT}`);
